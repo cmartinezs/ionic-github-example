@@ -1,30 +1,40 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
-      Ejemplo de Uso GitHub Desktop, modificado desde GitHub
+      Ejemplo de Uso de Github Desktop
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="outline" href="https://github.com" target="_blank" rel="noopener noreferrer">
+        Visitar GitHub
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-header collapse="condense">
+    <ion-toolbar color="secondary">
+      <ion-title size="large">¡Comencemos!</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container" class="text-center">
+    <h2>¿Listo para crear una app?</h2>
+    <p>Empieza con Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components" class="highlight">UI Components</a></p>
+    <ion-button expand="full" color="success" href="https://ionicframework.com/docs/getting-started" target="_blank" rel="noopener noreferrer">
+      Aprende más sobre Ionic
+    </ion-button>
+  </div>
+
   <ion-card>
     <ion-card-header>
-      <ion-card-title>
-        <h1>GitHub Desktop</h1>
-      </ion-card-title>
+      <ion-card-title>Guía Rápida de GitHub</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <p>
-        GitHub Desktop es una aplicación de escritorio que le permite trabajar con GitHub desde su computadora.
-      </p>
-      <p>
-        GitHub Desktop se sincroniza con su cuenta de GitHub y le permite clonar repositorios, crear ramas, realizar
-        cambios, confirmarlos y enviarlos a GitHub.
-      </p>
-      <p>
-        GitHub Desktop es una excelente herramienta para trabajar con GitHub, especialmente si no está familiarizado con
-        la línea de comandos.
-      </p>
+      <p>Aprende a gestionar tus proyectos y colaboraciones de manera eficiente con GitHub. Accede a la documentación y descubre todas las funcionalidades que ofrece.</p>
+      <ion-button expand="full" color="primary" href="https://docs.github.com/en" target="_blank" rel="noopener noreferrer">
+        Ver Documentación
+      </ion-button>
       <p>
         Alejandro Salas ha sido agregado como colaborador.
       </p>
@@ -32,3 +42,26 @@
     </ion-card-content>
   </ion-card>
 </ion-content>
+
+<style>
+  #container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+  }
+
+  .highlight {
+    color: var(--ion-color-primary);
+    font-weight: bold;
+  }
+
+  ion-card {
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+</style>
+
